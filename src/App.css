@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe;
+}
+
+:root {
+  --primary-color: #B990FE;
+}
+
+.bg-btn {
+  background-color: var(--primary-color);
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bg-login {
+  background-color: var(--primary-color);
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  color: black;
+  margin-top: 5px;
+}
+
+.bg-signup {
+  background-color: #697BD0;
+  padding:12px;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  color: white;
+  margin-top: 5px;
+}
+
+.pagination {
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination span {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.pagination__selected {
+  background-color: #0DCAF0;
+}
+
+.pagination__disable {
+  opacity: 0;
+}
+
+.bird-size {
+  font-size: 25px;
+}
+
+.font {
+  font-family: "Playball", 'cursive';
+  font-style: normal;
+}
