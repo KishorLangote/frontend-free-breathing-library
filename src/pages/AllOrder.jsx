@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 
 const AllOrder = () => {
-  const [allOrder, setAllOrder] = useState([]);
+  const [allOrder, setAllOrder] = useState(null);
   
 
   const headers = {
@@ -58,6 +58,64 @@ const AllOrder = () => {
 
  
   return (
+    // <div className="container mt-5">
+    //   {allOrder?.length === 0 ? (
+    //     <div className="text-center mt-5">
+    //       <p className="fs-2 fw-bold">No Orders Found.</p>
+    //     </div>
+    //   ) : (
+    //     <>
+    //       <h2 className="text-center mb-4">Book Order History</h2>
+    //       <div className="table-responsive">
+    //         <table className="table table-bordered text-center shadow">
+    //           <thead className="bg-secondary text-light">
+    //             <tr className="fs-5">
+    //               <th>Sr.</th>
+    //               <th>Book</th>
+    //               <th>Genre</th>
+    //               <th>Price</th>
+    //               <th>Status</th>
+    //               <th>
+    //                 <FaUser />
+    //               </th>
+    //             </tr>
+    //           </thead>
+    //           <tbody>
+    //             {allOrder?.map((order, index) => {
+    //               const book = order.book?.[0];
+    //               return (
+    //                 <tr key={order._id}>
+    //                   <td>{index + 1}</td>
+    //                   <td>{book.title || "N/A"}</td>
+    //                   <td>{book.genre || "N/A"}</td>
+    //                   <td>₹{book.price || "0.00"}</td>
+    //                   <td className="text-success fw-bold">
+    //                     <select
+    //                       className="form-select"
+    //                       value={order.status}
+    //                       onChange={(e) =>
+    //                         handleStatusChange(order._id, e.target.value)
+    //                       }
+    //                     >
+    //                       <option value="Order Placed">Order Placed</option>
+    //                       <option value="Out for delivery">
+    //                         Out for delivery
+    //                       </option>
+    //                       <option value="Delivered">Delivered</option>
+    //                       <option value="Cancelled">Cancelled</option>
+    //                     </select>
+    //                   </td>
+
+    //                   <td>{order.user?.email || "N/A"} </td>
+    //                 </tr>
+    //               );
+    //             })}
+    //           </tbody>
+    //         </table>
+    //       </div>
+    //     </>
+    //   )}
+    // </div>
     <div className="container mt-5">
       {allOrder?.length === 0 ? (
         <div className="text-center mt-5">
@@ -81,8 +139,8 @@ const AllOrder = () => {
                 </tr>
               </thead>
               <tbody>
-                {allOrder?.map((order, index) => {
-                  const book = order.book?.[0];
+                {allOrder.map((order, index) => {
+                  const book = order.book?.[0] || {}; // handle missing book case
                   return (
                     <tr key={order._id}>
                       <td>{index + 1}</td>
