@@ -9,6 +9,7 @@ const AllRequest = () => {
     id: localStorage.getItem("id"),
     authorization: `Bearer ${localStorage.getItem("token")}`
   }
+  
   useEffect(() => {
     const fetchRequest = async () => {
       try {
@@ -17,7 +18,7 @@ const AllRequest = () => {
           { headers },
           
         );
-        // console.log(response.data);
+        console.log("All Request:", response.data);
         setAllRequest(response.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
