@@ -3,13 +3,13 @@ import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 
 const AllRequest = () => {
-  const [allRequest, setAllRequest] = useState([]);
+  const [allRequest, setAllRequest] = useState();
 
   const headers = {
     id: localStorage.getItem("id"),
     authorization: `Bearer ${localStorage.getItem("token")}`
   }
-  
+
   useEffect(() => {
     const fetchRequest = async () => {
       try {
@@ -102,12 +102,12 @@ const AllRequest = () => {
                       return (
                         <tr key={request._id}>
                           <td>{index + 1}</td>
-                          <td>{request.title || "N/A"}</td>
-                          <td>{request.author || "N/A"}</td>
-                          <td>{request.genre || "0.00"}</td>
-                          <td>{request.publication || "N/A"} </td>
-                          <td>{request.language || "N/A"} </td>
-                          <td>{request.user && request.user.email ? request.user.email : "N/A"} </td>
+                          <td>{request?.title || "N/A"}</td>
+                          <td>{request?.author || "N/A"}</td>
+                          <td>{request?.genre || "0.00"}</td>
+                          <td>{request?.publication || "N/A"} </td>
+                          <td>{request?.language || "N/A"} </td>
+                          <td>{request.user?.email || "N/A"} </td>
                         </tr>
                       );
                     })}
