@@ -76,7 +76,7 @@ const AllRequest = () => {
     //   )}
     // </div>
     <div className="container mt-5 mx-auto">
-          {allRequest?.length === 0 ? (
+          {allRequest.length === 0 ? (
             <div className="text-center mt-5">
               <p className="fs-2 fw-bold">No Requests Found.</p>
             </div>
@@ -97,7 +97,7 @@ const AllRequest = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {allRequest?.map((request, index) => {
+                    {allRequest.map((request, index) => {
                       return (
                         <tr key={request._id}>
                           <td>{index + 1}</td>

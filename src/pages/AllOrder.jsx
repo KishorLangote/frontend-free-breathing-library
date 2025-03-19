@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 
 const AllOrder = () => {
-  const [allOrder, setAllOrder] = useState(null);
+  const [allOrder, setAllOrder] = useState([]);
   
 
   const headers = {
@@ -19,6 +19,7 @@ const AllOrder = () => {
           "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-all-orders",
           { headers }
         );
+        console.log("API Response:", response.data);
         setAllOrder(response.data.data);
       } catch (error) {
         console.error("Error fetching orders:", error);
@@ -46,15 +47,15 @@ const AllOrder = () => {
     }
   };
 
-  // if(!allOrder) {
-  //   return (
-  //     <div className="text-center mt-5">
-  //         <div className="spinner-border text-primary" >
-  //         </div>
-  //         <p className="fs-4 mt-3">Loading orders...</p>
-  //       </div>
-  //   )
-  // }
+  if(allOrder === null) {
+    return (
+      <div className="text-center mt-5">
+          <div className="spinner-border text-primary" >
+          </div>
+          <p className="fs-4 mt-3">Loading orders...</p>
+        </div>
+    )
+  }
 
  
   return (
@@ -117,7 +118,7 @@ const AllOrder = () => {
     //   )}
     // </div>
     <div className="container mt-5">
-      {allOrder?.length === 0 ? (
+      {allOrder.length === 0 ? (
         <div className="text-center mt-5">
           <p className="fs-2 fw-bold">No Orders Found.</p>
         </div>
@@ -139,7 +140,7 @@ const AllOrder = () => {
                 </tr>
               </thead>
               <tbody>
-                {allOrder?.map((order, index) => {
+                {allOrder.map((order, index) => {
                   const book = order.book?.[0] || {}; // handle missing book case
                   return (
                     <tr key={order._id}>
