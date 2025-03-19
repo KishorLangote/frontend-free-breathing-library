@@ -106,7 +106,7 @@ const AllRequest = () => {
                           <td>{request.genre || "0.00"}</td>
                           <td>{request.publication || "N/A"} </td>
                           <td>{request.language || "N/A"} </td>
-                          <td>{request.user.email || "N/A"} </td>
+                          <td>{request.user?.email || "N/A"} </td>
                         </tr>
                       );
                     })}
