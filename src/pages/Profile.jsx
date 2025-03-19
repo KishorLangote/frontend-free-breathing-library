@@ -19,8 +19,8 @@ const Profile = () => {
           "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-user-information",
           { headers }
         );
-        // console.log("dATA:", response.data);
-        setProfile(response.data);
+        console.log("fetched profile data:", response.data);
+        setProfile(response.data.user || response.data);
       } catch (error) {
         console.error("Error fetching profile data:", error);
       }
