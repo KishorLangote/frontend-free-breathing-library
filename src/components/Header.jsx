@@ -13,25 +13,23 @@ const Header = () => {
     <header>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container fw-medium">
-          <div  className="d-flex flex-row align-items-center justify-content-center">
-          <Link to="/" className="navbar-brand fw-bold">
-            <div 
-            style={{ width: "100px" }}
-           
-            >
-              <img
-                src="https://res-console.cloudinary.com/dzuydzr7l/thumbnails/v1/image/upload/v1741176580/RlJFRV9CUkVBVEhJTkdfTE9HT194b3N5Mzg=/drilldown"
-                alt="logo"
-                className="img-fluid object-cover rounded-circle"
-              />
-            </div>
-          </Link>
+          <div className="d-flex flex-row align-items-center justify-content-center mb-2">
+            <Link to="/" className="navbar-brand fw-bold">
+              <div style={{ width: "100px" }}>
+                <img
+                  src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
+                  alt="logo"
+                  className="img-fluid object-cover rounded-circle"
+                />
+              </div>
+            </Link>
             <div>
-              <p className="display-5 fw-bold font mx-0">मोकळा श्वास...<GiHummingbird /></p>
-              {/* <small className="fw-bold">मोकळा श्वास...<GiHummingbird className="bird-size" /></small> */}
-             
+              <p className="display-5 fw-bold font mx-0">
+                मोकळा श्वास...
+                <GiHummingbird />
+              </p>
             </div>
-            </div>
+          </div>
           <button
             className="navbar-toggler"
             type="button"
@@ -44,12 +42,11 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          
-
-          <div className="collapse navbar-collapse justify-content-end" id="navBar">
-          
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="navBar"
+          >
             <ul className="navbar-nav fs-5 fw-semibold">
-             
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
                   Home
@@ -72,41 +69,42 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/cart">
-                <FaCartShopping /> Cart
+                  <FaCartShopping /> Cart
                 </NavLink>
               </li>
 
-
               {/* show "Profile" only for regular users */}
               {isLoggedIn && role === "user" && (
-               
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/profile">
-                  <FaUser /> Profile
+                    <FaUser /> Profile
                   </NavLink>
                 </li>
-                
               )}
 
               {/* show "Admin Profile" only for admins */}
               {isLoggedIn && role === "admin" && (
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/profile">
-                  <FaUser /> Admin Profile
+                    <FaUser /> Admin Profile
                   </NavLink>
                 </li>
               )}
             </ul>
 
-         
-
             {/* show SignUp & LogIn only when NOT logged in */}
             {!isLoggedIn && (
-              <div className="d-flex gap-3">
-                <Link to="/signup" className="bg-signup fw-bold">
+              <div className="d-flex flex-column flex-lg-row gap-3 mt-3 mt-lg-0">
+                <Link
+                  to="/signup"
+                  className="bg-signup fw-bold text-center text-dark w-100 p-2 rounded"
+                >
                   SignUp
                 </Link>
-                <Link to="/login" className="bg-login text-light fw-bold">
+                <Link
+                  to="/login"
+                  className="bg-login text-light fw-bold text-center text-dark w-100 p-2 rounded"
+                >
                   LogIn
                 </Link>
               </div>

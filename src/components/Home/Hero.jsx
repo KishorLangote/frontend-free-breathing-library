@@ -22,7 +22,7 @@ const Hero = () => {
         {/* Image Section */}
         <div className="col-12 col-md-6 mt-4 mt-md-0">
           <img
-            src="https://res-console.cloudinary.com/dzuydzr7l/thumbnails/v1/image/upload/v1741216590/aGVyby1jdXJyZW50LWxvZ29feGdocmFk/drilldown"
+            src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741216590/hero-current-logo_xghrad.jpg"
             alt="hero-logo"
             className="img-fluid rounded"
             style={{ objectFit: "cover", width: "100%", maxHeight: "600px" }}
