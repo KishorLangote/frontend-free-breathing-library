@@ -4,7 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 
 const AllOrder = () => {
-  const [allOrder, setAllOrder] = useState(null);
+  const [allOrder, setAllOrder] = useState([]);
   
 
   const headers = {
