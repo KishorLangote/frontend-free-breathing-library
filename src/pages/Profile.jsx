@@ -7,7 +7,7 @@ import MobileNav from '../components/Profile/MobileNav';
 
 const Profile = () => {
   const [profile, setProfile] = useState([]);
-  
+  console.log("profile:", profile)
   const headers = {
     id: localStorage.getItem("id"),
     authorization: `Bearer ${localStorage.getItem("token")}`,
