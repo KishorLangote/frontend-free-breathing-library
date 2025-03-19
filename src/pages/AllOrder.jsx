@@ -106,7 +106,7 @@ const AllOrder = () => {
                         </select>
                       </td>
 
-                      <td>{order.user?.email || "N/A"} </td>
+                      <td>{order.user.email || "N/A"} </td>
                     </tr>
                   );
                 })}
