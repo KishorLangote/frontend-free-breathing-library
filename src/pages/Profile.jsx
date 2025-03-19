@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import Sidebar from '../components/Profile/Sidebar';
-import axios from 'axios';
-import MobileNav from '../components/Profile/MobileNav';
-
+import React, { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Profile/Sidebar";
+import axios from "axios";
+import MobileNav from "../components/Profile/MobileNav";
 
 const Profile = () => {
-  const [profile, setProfile] = useState([]);
-  console.log("profile:", profile)
+  const [profile, setProfile] = useState(null);
+  console.log("profile:", profile);
   const headers = {
     id: localStorage.getItem("id"),
     authorization: `Bearer ${localStorage.getItem("token")}`,
   };
 
-
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-user-information", 
+        const response = await axios.get(
+          "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-user-information",
           { headers }
         );
         // console.log("dATA:", response.data);
@@ -30,8 +29,16 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="container py-4" style={{ minHeight: '100vh'}}>
-      {profile && (
+    <div className="container py-4" style={{ minHeight: "100vh" }}>
+      {!profile ? (
+        <div
+          className="d-flex justify-content-center align-items-center"
+          style={{ minHeight: "80vh" }}
+        >
+          <div className="spinner-border text-primary"></div>
+          <p className="fs-4 mt-3">Loading orders...</p>
+        </div>
+      ) : (
         <div className="row">
           <div className="col-12 col-md-3 mb-4 mb-md-0">
             <Sidebar data={profile} />
@@ -47,4 +54,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
