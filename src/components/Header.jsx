@@ -82,8 +82,7 @@ const Header = () => {
                
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/profile">
-                  <FaUser />
-                  {/* Profile */}
+                  <FaUser /> Profile
                   </NavLink>
                 </li>
                 
@@ -93,8 +92,7 @@ const Header = () => {
               {isLoggedIn && role === "admin" && (
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/profile">
-                  <FaUser />
-                  {/* Admin Profile */}
+                  <FaUser /> Admin Profile
                   </NavLink>
                 </li>
               )}
