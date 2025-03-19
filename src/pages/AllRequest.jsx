@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 
 const AllRequest = () => {
-  const [allRequest, setAllRequest] = useState(null);
+  const [allRequest, setAllRequest] = useState([]);
 
   const headers = {
     id: localStorage.getItem("id"),
@@ -28,7 +28,7 @@ const AllRequest = () => {
 
   return (
     <div className="container mt-5 mx-auto">
-      {allRequest === null ? (
+      {!allRequest ? (
         <div className="text-center mt-5">
           <div className="spinner-border text-primary"></div>
           <p className="fs-4 mt-3">Loading request...</p>
