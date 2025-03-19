@@ -98,7 +98,6 @@ const AllRequest = () => {
                   </thead>
                   <tbody>
                     {allRequest.map((request, index) => {
-                      const userEmail = request.user?.email || "N/A" //checking for null user
                       return (
                         <tr key={request._id}>
                           <td>{index + 1}</td>
@@ -107,7 +106,7 @@ const AllRequest = () => {
                           <td>{request.genre || "0.00"}</td>
                           <td>{request.publication || "N/A"} </td>
                           <td>{request.language || "N/A"} </td>
-                          <td>{userEmail} </td>
+                          <td>{request.user && request.user.email ? request.user.email : "N/A"} </td>
                         </tr>
                       );
                     })}
