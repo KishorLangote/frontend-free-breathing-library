@@ -6,7 +6,7 @@ import MobileNav from '../components/Profile/MobileNav';
 
 
 const Profile = () => {
-  const [profile, setProfile] = useState(null);
+  const [profile, setProfile] = useState([]);
   
   const headers = {
     id: localStorage.getItem("id"),
