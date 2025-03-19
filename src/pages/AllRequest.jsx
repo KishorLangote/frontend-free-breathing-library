@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 
 const AllRequest = () => {
-  const [allRequest, setAllRequest] = useState();
+  const [allRequest, setAllRequest] = useState([]);
 
   const headers = {
     id: localStorage.getItem("id"),
