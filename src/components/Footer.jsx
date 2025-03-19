@@ -49,13 +49,13 @@ const Footer = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <h5 className="fw-bold mb-3">Follow Us</h5>
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mb-3">
-              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-dark">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-dark">
                 <TbBrandMeta size={24} />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-dark">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-dark">
                 <IoLogoInstagram size={24} />
               </a>
-              <a href="https://x.com/KishorLangote0" target="_blank" rel="noopener noreferrer" className="text-dark">
+              <a href="https://x.com/FreeBreathing0" target="_blank" rel="noopener noreferrer" className="text-dark">
                 <RiTwitterXLine size={24} />
               </a>
             </div>
