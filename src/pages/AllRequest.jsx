@@ -97,7 +97,7 @@ const AllRequest = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {allRequest.map((request, index) => {
+                    {allRequest?.map((request, index) => {
                       return (
                         <tr key={request._id}>
                           <td>{index + 1}</td>
