@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
+import Loader from "../components/Loader/Loader";
 
 const AllRequest = () => {
   const [allRequest, setAllRequest] = useState([]);
@@ -26,6 +27,13 @@ const AllRequest = () => {
     };
     fetchRequest();
   }, []);
+
+  if(allRequest.length === 0){
+    return (
+      <div>
+        <Loader />
+      </div>
+    )
 
   return (
     
