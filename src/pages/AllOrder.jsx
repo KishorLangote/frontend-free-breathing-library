@@ -48,7 +48,7 @@ const AllOrder = () => {
     }
   };
 
-  if (loading === true) {
+  if (loading) {
     return (
       <div className="text-center mt-5">
         <div className="spinner-border text-primary"></div>
