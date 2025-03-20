@@ -10,7 +10,10 @@ const Loader = () => (
       paddingTop: "20px", 
     }}
   >
-    <p className="fs-4">Loading...</p>
+    <div className="text-center mt-5">
+        <div className="spinner-border text-primary"></div>
+        <p className="fs-4 mt-3">Loading...</p>
+      </div>
   </div>
 );
 
