@@ -13,18 +13,19 @@ const AllOrder = () => {
 
   useEffect(() => {
     const fetchOrder = async () => {
+      setLoading(true); // set loading before fetching data
       try {
-        setLoading(true); // set loading before fetching data
         const response = await axios.get(
           "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-all-orders",
           { headers }
         );
         // console.log("API Response:", response.data);
         setAllOrder(response.data.data);
-        setLoading(false);
+       
       } catch (error) {
         console.error("Error fetching orders:", error);
       }
+      setLoading(false);
     };
     fetchOrder();
   }, []);
