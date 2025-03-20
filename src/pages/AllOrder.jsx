@@ -5,6 +5,7 @@ import Loader from "../components/Loader/Loader";
 
 const AllOrder = () => {
   const [allOrder, setAllOrder] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   const headers = {
     id: localStorage.getItem("id"),
@@ -13,6 +14,7 @@ const AllOrder = () => {
 
   useEffect(() => {
     const fetchOrder = async () => {
+      setLoading(true)
       try {
         const response = await axios.get(
           "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-all-orders",
@@ -24,7 +26,7 @@ const AllOrder = () => {
       } catch (error) {
         console.error("Error fetching orders:", error);
       }
-     
+      setLoading(false)
     };
     fetchOrder();
   }, []);
@@ -48,21 +50,19 @@ const AllOrder = () => {
     }
   };
 
-  // if (loading) {
-  //   return (
-  //     <div className="text-center mt-5">
-  //       <div className="spinner-border text-primary"></div>
-  //       <p className="fs-4 mt-3">Loading orders...</p>
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div className="text-center mt-5" style={{minHeight: '50vh'}}>
+        <div className="spinner-border text-primary"></div>
+        <p className="fs-4 mt-3">Loading orders...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-5">
 
-      { !allOrder ? (
-        <Loader />
-      ) : allOrder.length === 0 ? (
+      { allOrder.length === 0 ? (
         <div className="text-center mt-5">
           <p className="fs-2 fw-bold">No Orders Found.</p>
         </div>
