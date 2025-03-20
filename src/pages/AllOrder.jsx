@@ -60,7 +60,7 @@ const AllOrder = () => {
   return (
     <div className="container mt-5">
 
-      {allOrder.length === 0 ? (
+      {!allOrder ? (
         <div className="text-center mt-5">
         <div className="spinner-border text-primary"></div>
         <p className="fs-4 mt-3">Loading orders...</p>
