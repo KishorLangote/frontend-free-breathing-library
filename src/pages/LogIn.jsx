@@ -10,7 +10,7 @@ import { FaEyeSlash } from "react-icons/fa";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loginInfo, setLoginInfo] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -25,7 +25,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      if (loginInfo.username == "" && loginInfo.password == "") {
+      if (loginInfo.email == "" && loginInfo.password == "") {
         alert("All fields are required!");
        
       } else {
@@ -62,15 +62,15 @@ const Login = () => {
 
           <form onSubmit={handleLogin} className="w-100">
             <div className="mb-3">
-              <label htmlFor="username" className="form-label">
-                Username
+              <label htmlFor="email" className="form-label">
+                Email
               </label>
               <input
                 type="text"
                 className="form-control w-100"
-                name="username"
-                placeholder="Enter your username..."
-                value={loginInfo.username}
+                name="email"
+                placeholder="Enter your email..."
+                value={loginInfo.email}
                 onChange={handleChange}
               />
             </div>
