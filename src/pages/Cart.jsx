@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { MdDelete } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-import Loader from "../components/Loader/Loader";
+
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   // const [total, setTotal] = useState(0);
 
   const headers = {
@@ -16,7 +16,7 @@ const Cart = () => {
   const navigate = useNavigate();
   const fetchCart = async () => {
     try {
-      // setLoading(true)
+      setLoading(true)
       const response = await axios.get(
         "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-user-cart",
         { headers }
@@ -26,7 +26,7 @@ const Cart = () => {
     } catch (error) {
       console.error("Error fetching cart:", error);
     }
-    // setLoading(false)
+    setLoading(false)
   };
 
   useEffect(() => {
@@ -72,25 +72,18 @@ const Cart = () => {
     }
   };
 
-  // if(loading) {
-  //   return (
-  //     <div className="text-center mt-4" style={{minHeight: '80vh'}}>
-  //       <div className="spinner-border text-primary"></div>
-  //       <p className="fs-4 mt-3">Loading...</p>
-  //     </div>
-  //   )
-  // }
+  if(loading) {
+    return (
+      <div className="text-center mt-4" style={{minHeight: '80vh'}}>
+        <div className="spinner-border text-primary"></div>
+        <p className="fs-4 mt-3">Loading...</p>
+      </div>
+    )
+  }
 
   return (
     <div className="container mt-5" style={{ minHeight: "100vh" }}>
-      { !cart ? ( 
-        <div
-          className="d-flex justify-content-center align-items-center"
-          style={{ minHeight: "50vh" }}
-        >
-         <Loader />
-        </div> ) :
-      cart.length === 0 ? (
+      {cart.length === 0 ? (
         <div className="d-flex flex-column align-items-center justify-content-center mt-5">
           <p className="fs-2 fw-bold">Empty Cart.</p>
         </div>
