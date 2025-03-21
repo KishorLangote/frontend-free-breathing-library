@@ -15,16 +15,17 @@ const Cart = () => {
   const navigate = useNavigate();
   const fetchCart = async () => {
     try {
+      setLoading(true)
       const response = await axios.get(
         "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-user-cart",
         { headers }
       );
-
-      console.log("Cart Data:", response.data.data);
+      // console.log("Cart Data:", response.data.data);
       setCart(response.data.data);
     } catch (error) {
       console.error("Error fetching cart:", error);
     }
+    setLoading(false)
   };
 
   useEffect(() => {
