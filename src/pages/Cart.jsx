@@ -74,7 +74,7 @@ const Cart = () => {
 
   if(loading) {
     return (
-      <div className="text-center mt-4" style={{minHeight: '80vh'}}>
+      <div className="text-center mt-4" style={{minHeight: '80vh', paddingTop: '20px'}}>
         <div className="spinner-border text-primary"></div>
         <p className="fs-4 mt-3">Loading...</p>
       </div>
