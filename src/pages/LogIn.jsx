@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
 import { authActions } from "../components/store/auth";
 import { useDispatch } from "react-redux";
@@ -41,12 +40,12 @@ const Login = () => {
         localStorage.setItem("id", response.data.id);
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("role", response.data.role);
-        console.log("Res:", response)
-        toast.success("Login Successfully!");
+        
+        alert("Login Successfully!");
         navigate("/profile");
       }
     } catch (error) {
-      toast.error(error.message);
+      alert(error.message);
     }
   };
 

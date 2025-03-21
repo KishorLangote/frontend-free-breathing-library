@@ -22,8 +22,6 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import RequestBook from "./components/Profile/RequestBook";
 import AllRequest from "./pages/AllRequest";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const dispatch = useDispatch();
@@ -69,20 +67,6 @@ function App() {
         <Route path="/book-details/:id" element={<BookDetails />} />
       </Routes>
       <Footer />
-
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      
-        />
     </div>
   );
 }
