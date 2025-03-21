@@ -23,6 +23,7 @@ import Contact from "./components/Contact";
 import RequestBook from "./components/Profile/RequestBook";
 import AllRequest from "./pages/AllRequest";
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   const dispatch = useDispatch();

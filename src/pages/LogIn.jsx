@@ -41,7 +41,7 @@ const Login = () => {
         localStorage.setItem("id", response.data.id);
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("role", response.data.role);
-
+        console.log("Res:", response)
         toast.success(response.message);
         navigate("/profile");
       }
