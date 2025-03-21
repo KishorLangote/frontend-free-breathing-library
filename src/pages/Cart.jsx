@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(true);
   // const [total, setTotal] = useState(0);
+
   const headers = {
     id: localStorage.getItem("id"),
     authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -68,6 +70,14 @@ const Cart = () => {
     }
   };
 
+  if(loading) {
+    return (
+      <div className="text-center mt-4" style={{minHeight: '50vh'}}>
+        <div className="spinner-border text-primary"></div>
+        <p className="fs-4 mt-3">Loading...</p>
+      </div>
+    )
+  }
 
   return (
     <div className="container mt-5" style={{ minHeight: "100vh" }}>
