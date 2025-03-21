@@ -43,10 +43,12 @@ const SignUp = () => {
       alert(error.response.data.message);
     }
   };
-  
 
   return (
-    <div className="container d-flex justify-content-center align-items-center mx-auto py-5" style={{minHeight: '60vh'}}>
+    <div
+      className="container d-flex justify-content-center align-items-center mx-auto py-5"
+      style={{ minHeight: "60vh" }}
+    >
       <div className="card p-4 shadow w-100" style={{ maxWidth: "400px" }}>
         <h2 className="text-center mb-3">Sign Up</h2>
 
@@ -95,7 +97,7 @@ const SignUp = () => {
                 onChange={handleChange}
                 required
               />
-            
+
               <div
                 className="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer"
                 onClick={() => setShowPassword((prevState) => !prevState)}
@@ -133,7 +135,6 @@ const SignUp = () => {
           </small>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 };
