@@ -34,7 +34,7 @@ const AllRequest = () => {
     return (
       <div className="text-center mt-5" style={{minHeight: '50vh'}}>
         <div className="spinner-border text-primary"></div>
-        <p className="fs-4 mt-3">Loading...</p>
+        <p className="fs-4 mt-3">Loading...gg</p>
       </div>
     );
   }

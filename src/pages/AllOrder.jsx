@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
-// import Loader from "../components/Loader/Loader";
+
 
 const AllOrder = () => {
   const [allOrder, setAllOrder] = useState([]);
