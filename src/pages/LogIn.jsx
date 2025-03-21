@@ -43,10 +43,10 @@ const Login = () => {
         localStorage.setItem("role", response.data.role);
 
         navigate("/profile");
-        toast("Signup Successfully!");
+        toast.success("Signup Successfully!");
       }
     } catch (error) {
-      toast(error.message);
+      toast.error(error.message);
     }
   };
 
