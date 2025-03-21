@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault();
     try {
       if (loginInfo.username == "" && loginInfo.password == "") {
-        toast.error("All fields are required!");
+        alert("All fields are required!");
        
       } else {
         const response = await axios.post(
@@ -45,7 +45,7 @@ const Login = () => {
         navigate("/profile");
       }
     } catch (error) {
-      alert(error.message);
+      alert(error);
     }
   };
 
