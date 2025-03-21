@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
         draggable
         pauseOnHover
         theme="light"
-        transition={Bounce}
+      
         />
       </Provider>
     </Router>
