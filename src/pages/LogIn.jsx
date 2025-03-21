@@ -45,7 +45,7 @@ const Login = () => {
         navigate("/profile");
       }
     } catch (error) {
-      alert(error.message);
+      alert(error.response.data.message);
     }
   };
 
