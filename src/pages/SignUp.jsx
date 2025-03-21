@@ -37,6 +37,7 @@ const SignUp = () => {
           "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/sign-up",
           signupInfo
         );
+        console.log("Resp:", response.data.message)
         alert(response.data);
         alert("Signup Successfully!");
         navigate("/login");
