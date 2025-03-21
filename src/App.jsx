@@ -22,6 +22,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import RequestBook from "./components/Profile/RequestBook";
 import AllRequest from "./pages/AllRequest";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/all-books" element={<AllBooks />}></Route>
+        <ToastContainer /> 
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />}>
           {/* index means by default */}
