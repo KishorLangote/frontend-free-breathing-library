@@ -45,7 +45,6 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/all-books" element={<AllBooks />}></Route>
-        <ToastContainer /> 
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />}>
           {/* index means by default */}
@@ -69,6 +68,20 @@ function App() {
         <Route path="/book-details/:id" element={<BookDetails />} />
       </Routes>
       <Footer />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      
+        />
     </div>
   );
 }
