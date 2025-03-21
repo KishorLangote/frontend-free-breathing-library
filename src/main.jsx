@@ -7,8 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./components/store/index.js";
-import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
