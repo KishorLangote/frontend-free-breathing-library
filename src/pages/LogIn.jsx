@@ -42,7 +42,7 @@ const Login = () => {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("role", response.data.role);
 
-        toast.success("Login Successful!");
+        toast.success(response.message);
         navigate("/profile");
       }
     } catch (error) {
