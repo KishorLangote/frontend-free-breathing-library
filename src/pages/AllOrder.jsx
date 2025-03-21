@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
-
+// import Loader from "../components/Loader/Loader";
 
 const AllOrder = () => {
   const [allOrder, setAllOrder] = useState([]);
@@ -14,7 +14,7 @@ const AllOrder = () => {
 
   useEffect(() => {
     const fetchOrder = async () => {
-      // setLoading(true)
+      setLoading(true)
       try {
         const response = await axios.get(
           "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-all-orders",
@@ -26,7 +26,7 @@ const AllOrder = () => {
       } catch (error) {
         console.error("Error fetching orders:", error);
       }
-      // setLoading(false)
+      setLoading(false)
     };
     fetchOrder();
   }, []);
@@ -50,14 +50,14 @@ const AllOrder = () => {
     }
   };
 
-  // if (loading) {
-  //   return (
-  //     <div className="text-center mt-5" style={{minHeight: '50vh'}}>
-  //       <div className="spinner-border text-primary"></div>
-  //       <p className="fs-4 mt-3">Loading</p>
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div className="text-center mt-5" style={{minHeight: '50vh'}}>
+        <div className="spinner-border text-primary"></div>
+        <p className="fs-4 mt-3">Loading</p>
+      </div>
+    );
+  }
 
   return (
     <div className="container mt-5">

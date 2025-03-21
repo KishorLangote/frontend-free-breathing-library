@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Profile/Sidebar";
 import axios from "axios";
 import MobileNav from "../components/Profile/MobileNav";
+import Loader from "../components/Loader/Loader";
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -35,8 +36,7 @@ const Profile = () => {
           className="d-flex justify-content-center align-items-center"
           style={{ minHeight: "80vh" }}
         >
-          <div className="spinner-border text-primary"></div>
-          <p className="fs-4 mt-3">Loading orders...gg</p>
+         <Loader />
         </div>
       ) : (
         <div className="row">
