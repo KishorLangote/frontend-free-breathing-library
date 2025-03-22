@@ -15,7 +15,7 @@ const Header = () => {
         <div className="container fw-medium d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center justify-content-center mb-2">
             <Link to="/" className="navbar-brand fw-bold d-flex align-items-center gap-2">
-              <div style={{ width: "80px" }}>
+              <div style={{ width: "70px" }}>
                 <img
                   src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
                   alt="logo"
@@ -24,7 +24,7 @@ const Header = () => {
               </div>
             </Link>
             <div>
-              <p className="display-6 fw-bold mx-0">
+              <p className="fw-bold mx-0">
                 Free Breathing
               </p>
             </div>
