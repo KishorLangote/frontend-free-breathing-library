@@ -24,9 +24,9 @@ const Header = () => {
               </div>
             </Link>
             <div>
-              <p className="fw-bold mx-0">
+              <h className=" fs-3 fw-bold mx-0">
                 Free Breathing
-              </p>
+              </h>
             </div>
           </div>
           <button
