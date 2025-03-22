@@ -15,7 +15,7 @@ const Header = () => {
         <div className="container fw-medium d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center justify-content-center mb-2">
             <Link to="/" className="navbar-brand fw-bold d-flex align-items-center gap-2">
-              <div style={{ width: "50px" }}>
+              <div style={{ width: "80px" }}>
                 <img
                   src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
                   alt="logo"
