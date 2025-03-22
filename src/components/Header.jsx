@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container fw-medium">
+        <div className="container fw-medium col-lg-6 col-md-8 col-sm-12">
           <div className="d-flex flex-row align-items-center justify-content-center mb-2">
             <Link to="/" className="navbar-brand fw-bold">
               <div style={{ width: "100px" }}>
