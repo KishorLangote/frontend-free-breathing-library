@@ -9,9 +9,6 @@
   --primary-color: #B990FE;
 }
 
-.bg-logo {
-  background-color: var(--primary-color);
-}
 
 .bg-btn {
   background-color: var(--primary-color);
@@ -62,11 +59,8 @@
   opacity: 0;
 }
 
-.bird-size {
-  font-size: 25px;
-}
 
 .font {
-  font-family: "Playball", 'cursive';
+  font-family: "Playball";
   font-style: normal;
 }

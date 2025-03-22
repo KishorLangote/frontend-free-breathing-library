@@ -24,7 +24,7 @@ const Header = () => {
               </div>
             </Link>
             <div>
-              <p className="display-6 fw-bold font mx-0">
+              <p className="display-6 fw-bold mx-0">
                 Free Breathing
               </p>
             </div>
