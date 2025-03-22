@@ -25,8 +25,7 @@ const Header = () => {
             </Link>
             <div>
               <p className="display-6 fw-bold font mx-0">
-                मोकळा श्वास...
-                <GiHummingbird />
+                मोकळा <p className="">श्वास</p>
               </p>
             </div>
           </div>

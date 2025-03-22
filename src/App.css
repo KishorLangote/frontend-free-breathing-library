@@ -9,6 +9,10 @@
   --primary-color: #B990FE;
 }
 
+.bg-logo {
+  background-color: var(--primary-color);
+}
+
 .bg-btn {
   background-color: var(--primary-color);
   text-decoration: none;
