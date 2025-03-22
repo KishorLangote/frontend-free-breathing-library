@@ -25,7 +25,7 @@ const Header = () => {
             </Link>
             <div>
               <p className="display-6 fw-bold font mx-0">
-                मोकळा <p className="">श्वास</p>
+                Free Breathing
               </p>
             </div>
           </div>
