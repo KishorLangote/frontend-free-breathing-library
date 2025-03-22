@@ -13,7 +13,7 @@ const Header = () => {
     <header>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container fw-medium d-flex align-items-center justify-content-between">
-          <div className="d-flex flex-column align-items-center justify-content-center mb-2">
+          <div className="d-flex align-items-center justify-content-center mb-2">
             <Link to="/" className="navbar-brand fw-bold d-flex align-items-center gap-2">
               <div style={{ width: "50px" }}>
                 <img
