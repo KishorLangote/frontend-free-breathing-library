@@ -86,7 +86,7 @@ const BookDetails = () => {
     nevigate("/all-books");
   };
   return (
-    <div className="container-fluid py-4 min-vh-80">
+    <div className="container py-4 min-vh-80">
       <div className="row g-4 align-items-center mb-4 py-4">
         {/* Book Image */}
         <div className="col-12 col-md-4 text-center">
