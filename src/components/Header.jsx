@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ImBook } from "react-icons/im";
 import { GiHummingbird } from "react-icons/gi";
 import { FaUser } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
@@ -12,34 +11,37 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid fw-medium d-flex align-items-center justify-content-between">
-         
-            <Link to="/" className="navbar-brand fw-bold d-flex align-items-center">
-              <div style={{ width: "80px", objectFit: "cover" }}>
-                <img
-                  src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
-                  alt="logo"
-                  className="img-fluid object-cover rounded-circle"
-                />
-              </div>
+        <div className="container-fluid fw-medium d-flex align-items-center justify-content-between header-container">
+          <div className="d-flex align-items-center justify-content-between header-container">
+            {/* Logo */}
+            <Link to="/" className="navbar-brand d-flex align-items-center">
+              <img
+                src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
+                alt="logo"
+                className="img-fluid object-cover rounded-circle"
+                style={{ width: "70px", objectFit: "cover" }}
+              />
             </Link>
-            <div>
-              <h className=" fs-2 fw-bold mx-0 d-flex align-items-center fs-sm-3">
-                Free<strong className="purple">Breathing</strong> <span className="mx-1"><GiHummingbird className="bird" /></span>
-              </h>
-            </div>
-          
-          <button
-            className="navbar-toggler ms-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navBar"
-            aria-controls="navBar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+
+            {/* Heading */}
+            <h className="d-flex align-items-center fw-bold fs-1 text-nowrap">
+              Free<strong className="purple fw-bold">Breathing</strong>
+              <GiHummingbird className="bird mx-1" />
+            </h>
+
+            {/* Toggle Button */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navBar"
+              aria-controls="navBar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
           <div
             className="collapse navbar-collapse justify-content-end"
