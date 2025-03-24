@@ -105,7 +105,7 @@ const AllBooks = () => {
 
        {/* pagination */}
        <Pagination
-         page={currentPage} 
+         currentPage={page} 
          totalPages={Math.ceil(filteredGenre.length / 9)}
          onPageChange={SelectPageHandler}
        />
