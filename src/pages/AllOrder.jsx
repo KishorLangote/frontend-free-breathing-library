@@ -68,7 +68,7 @@ const AllOrder = () => {
         </div>
       ) : (
         <>
-          <h2 className="text-center mb-4">Book Order History</h2>
+          <h2 className="text-center fs-2 fw-bold mb-4">Book Order History</h2>
           <div className="table-responsive">
             <table className="table table-bordered text-center shadow">
               <thead className="bg-secondary text-light">
