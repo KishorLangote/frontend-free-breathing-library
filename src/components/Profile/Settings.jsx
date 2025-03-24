@@ -62,7 +62,7 @@ const [profileData, setProfileData] = useState("")
        )}
       {profileData && (
         <div>
-          <h1 className='mb-4 fs-3 fs-bold'>Setting</h1>
+          <h1 className='mb-4 fs-3 fw-bold'>Setting</h1>
           <div className='fs-5'>
             <div className='d-flex gap-3'>
               <label className='fw-bold'>Username:</label>
