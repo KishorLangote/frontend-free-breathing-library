@@ -68,3 +68,8 @@
 .purple {
   color: purple;
 }
+
+.bird:hover {
+  font-size: 50px;
+  color: rgb(16, 175, 19);
+}
