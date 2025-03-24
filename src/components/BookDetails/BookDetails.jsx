@@ -138,7 +138,7 @@ const BookDetails = () => {
 
         {/* Book Details */}
         <div className="col-12 col-md-5">
-          <div className="card p-3 shadow">
+          <div className="card p-3 shadow p-5">
             <h2>{data.title}</h2>
             <h5 className="text-muted">
               By {data.author?.join(", ") || "Unknown"}
