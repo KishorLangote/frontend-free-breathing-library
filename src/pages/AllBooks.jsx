@@ -3,6 +3,7 @@ import BookCard from "../components/BookCard/BookCard";
 import { useEffect } from "react";
 import axios from "axios";
 import { IoFilter } from "react-icons/io5";
+import Pagination from "../components/Pagination/Pagination";
 
 const AllBooks = () => {
   const [data, setData] = useState([]);
@@ -102,44 +103,12 @@ const AllBooks = () => {
             ))}
         </div>
 
-        <div className="row">
-          <div className="pagination container mt-3 d-flex flex-wrap justify-content-center align-items-center gap-2">
-            {/* prev btn */}
-            <span
-              onClick={() => SelectPageHandler(page - 1)}
-              className={`pagination-btn ${
-                page > 1 ? "" : "pagination__disable"
-              }`}
-            >
-              Prev
-            </span>
-
-            {/* page nums */}
-            {[...Array(Math.ceil(filteredGenre.length / 9))].map((_, index) => (
-              <span
-                className={`pagination-btn ${
-                  page === index + 1 ? "pagination__selected" : ""
-                }`}
-                onClick={() => SelectPageHandler(index + 1)}
-                key={index}
-              >
-                {index + 1}
-              </span>
-            ))}
-
-            {/* next btn */}
-            <span
-              onClick={() => SelectPageHandler(page + 1)}
-              className={`pagination-btn ${
-                page < Math.ceil(filteredGenre.length / 9)
-                  ? ""
-                  : "pagination__disable"
-              }`}
-            >
-              Next
-            </span>
-          </div>
-        </div>
+       {/* pagination */}
+       <Pagination
+         page={currentPage} 
+         totalPages={Math.ceil(filteredGenre.length / 9)}
+         onPageChange={SelectPageHandler}
+       />
       </div>
     </div>
   ) : (
