@@ -1,6 +1,6 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Loader from "../Loader/Loader";
 
 const Favorites = () => {
   const [favoriteBooks, setFavoriteBooks] = useState(null);
@@ -37,8 +37,7 @@ const Favorites = () => {
       );
       console.log(response.data);
       alert(response.data.message);
-      // re-fetch the updated favorite books from the server
-      fetchFavorites();
+      fetchFavorites(); // Re-fetch updated favorite books
     } catch (error) {
       console.error("Error removing book from favorites:", error);
     }
@@ -49,75 +48,56 @@ const Favorites = () => {
   }, []);
 
   return (
-    //   <div>
-
-    //     {!favoriteBooks.length &&
-    // <div className="d-flex justify-content-center align-items-center">
-    //   <Loader />
-    // </div>}
-
-    //     {favoriteBooks.length === 0 ? (
-    //       <div className="d-flex flex-column align-items-center justify-content-center mt-5">
-    //         <p className="fs-2 fw-bold">No favorite books found.</p>
-    //       </div>
-    //     ) : (
-    //       <>
-    //         <h1 className="text-center mb-4">Your Favorite Books</h1>
-    //         <div className="row row-cols-1 row-cols-md-3 g-4">
-    //           {favoriteBooks.map((item) => (
-    //             <div key={item._id} className="col">
-    //               <div className="card p-3">
-    //                 <img src={item.coverImageUrl} />
-    //                 <h5 className="card-title text-center mt-2 fs-4 fw-bold">{item.title}</h5>
-    //                 <p className="card-text text-center ">{item.author ? `${item.author.join(", ")}` : `${item.autor}`} </p>
-    //                 <button
-    //                   className="btn btn-danger"
-    //                   onClick={() => removeFavorite(item._id)}
-    //                 >
-    //                   Remove Favorites
-    //                 </button>
-    //               </div>
-    //             </div>
-    //           ))}
-    //         </div>
-    //       </>
-    //     )}
-    //   </div>
-    <div>
+    <div className="container">
+      {/* Loading state */}
       {favoriteBooks === null && (
         <div
           className="d-flex flex-column align-items-center justify-content-center mt-5"
           style={{ minHeight: "50vh" }}
-         >
+        >
           <div className="spinner-border text-primary"></div>
           <p className="fs-4 mt-3">Loading...</p>
         </div>
       )}
 
+      {/* No favorites found */}
       {favoriteBooks?.length === 0 && (
         <div className="d-flex flex-column align-items-center justify-content-center mt-5">
-          <p className="fs-2 fw-bold">No favorite books found.</p>
+          <p className="fs-3 fw-bold">No favorite books found</p>
         </div>
       )}
 
+      {/* Display favorite books */}
       {favoriteBooks?.length > 0 && (
         <>
-          <h1 className="text-center mb-4">Your Favorite Books</h1>
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+          <h1 className="text-center fs-3 fw-bold mb-4">Your Favorite Books</h1>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-4">
             {favoriteBooks.map((item) => (
               <div key={item._id} className="col">
-                <div className="card p-3">
-                  <img src={item.coverImageUrl} />
-                  <h5 className="card-title text-center mt-2 fs-4 fw-bold">
-                    {item.title}
-                  </h5>
-                  <p className="card-text text-center">
-                    {item.author
-                      ? `${item.author.join(", ")}`
-                      : `${item.autor}`}
+                <div className="card p-3 text-center shadow-sm">
+                  {/* Book Cover */}
+                  <img
+                    src={item.coverImageUrl}
+                    alt={item.title}
+                    className="img-fluid mx-auto"
+                    style={{
+                      maxWidth: "100px",
+                      height: "auto",
+                      objectFit: "cover",
+                    }}
+                  />
+                  
+                  {/* Title */}
+                  <h5 className="card-title mt-2 fw-bold">{item.title}</h5>
+                  
+                  {/* Author */}
+                  <p className="card-text">
+                    {item.author ? `${item.author.join(", ")}` : `${item.autor}`}
                   </p>
+
+                  {/* Remove Favorite Button */}
                   <button
-                    className="btn btn-danger"
+                    className="btn btn-danger btn-sm"
                     onClick={() => removeFavorite(item._id)}
                   >
                     Remove Favorite
