@@ -12,10 +12,10 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container fw-medium d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center justify-content-center mb-2">
-            <Link to="/" className="navbar-brand fw-bold d-flex align-items-center gap-2">
-              <div style={{ width: "90px" }}>
+        <div className="container-fluid fw-medium d-flex align-items-center justify-content-between">
+         
+            <Link to="/" className="navbar-brand fw-bold d-flex align-items-center">
+              <div style={{ width: "90px", objectFit: "cover" }}>
                 <img
                   src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
                   alt="logo"
@@ -25,10 +25,10 @@ const Header = () => {
             </Link>
             <div>
               <h className=" fs-2 fw-bold mx-0">
-                Free Breathing
+                Free Breathing <GiHummingbird />
               </h>
             </div>
-          </div>
+          
           <button
             className="navbar-toggler ms-auto"
             type="button"
