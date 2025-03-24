@@ -43,11 +43,11 @@ const AllRequest = () => {
     <div className="container mt-5 mx-auto">
       {allRequest.length === 0 ? (
         <div className="text-center mt-5">
-          <p className="fs-2 fw-bold">No Requests Found.</p>
+          <p className="fs-2 fw-bold">No Requests Found</p>
         </div>
       ) : (
         <>
-          <h2 className="text-center mb-4">Book Request History</h2>
+          <h2 className="text-center fs-2 fw-bold mb-4">Book Request History</h2>
           <div className="table-responsive">
             <table className="table table-bordered text-center shadow">
               <thead className="bg-secondary text-light">
