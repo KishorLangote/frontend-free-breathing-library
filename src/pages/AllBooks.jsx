@@ -19,7 +19,7 @@ const AllBooks = () => {
       setData(response.data.books);
     };
     fetchedData();
-  }, [filterGenre]);
+  }, []);
 
   const filteredGenre =
     filterGenre === "All"
