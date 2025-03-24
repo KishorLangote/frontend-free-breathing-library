@@ -97,7 +97,7 @@ const AddBooks = () => {
 
   return (
     <div className="container py-4 p-4">
-      <h1>Add Book</h1>
+      <h1 className="fs-2 fw-bold">Add Book</h1>
 
       <form onSubmit={submitFormHandler} className="mb-3 ">
         <div>
@@ -188,7 +188,7 @@ const AddBooks = () => {
             name="bookType"
             value={data.bookType}
             onChange={changeHandler}
-            className="form-control"
+            className="form-select"
             required
           >
             <option value="">Select Type</option>
@@ -353,8 +353,6 @@ const AddBooks = () => {
           </div>
         </div>
         <br />
-        {/* { display && <span>Please select one option.</span>} */}
-        <br />
 
         <div>
           <label htmlFor="sectionInput" className="mb-2">
@@ -388,7 +386,7 @@ const AddBooks = () => {
         </div>
         <br />
 
-        <button type="submit" className="btn btn-info text-light">
+        <button type="submit" className="btn btn-info fw-bold text-light">
           Submit
         </button>
       </form>
