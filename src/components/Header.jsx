@@ -15,7 +15,7 @@ const Header = () => {
         <div className="container-fluid fw-medium d-flex align-items-center justify-content-between">
          
             <Link to="/" className="navbar-brand fw-bold d-flex align-items-center">
-              <div style={{ width: "90px", objectFit: "cover" }}>
+              <div style={{ width: "80px", objectFit: "cover" }}>
                 <img
                   src="https://res.cloudinary.com/dzuydzr7l/image/upload/v1741258729/FREE_BREATHING_LOGO_x5lchq.jpg"
                   alt="logo"
