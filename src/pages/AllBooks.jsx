@@ -39,6 +39,12 @@ const AllBooks = () => {
       selectedPage !== page
     )
       setPage(selectedPage);
+
+      //  scroll to the top of the page when chnaging pages using pagination
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      })
   };
 
   return data ? (
