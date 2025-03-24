@@ -87,7 +87,7 @@ const BookDetails = () => {
   };
   return (
     <div className="container py-4 min-vh-80">
-      <div className="row g-4 align-items-center mb-4 py-4">
+      <div className="row g-4 align-items-center mb-4 py-4 justify-content-between">
         {/* Book Image */}
         <div className="col-12 col-md-4 text-center">
           <img
