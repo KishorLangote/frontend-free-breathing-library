@@ -87,7 +87,7 @@ const BookDetails = () => {
   };
 
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="container-fluid d-flex flex-column min-vh-100">
       {!data ? (
         <div
           className="text-center mt-5 d-flex justify-content-center align-items-center gap-3"
@@ -156,7 +156,6 @@ const BookDetails = () => {
               </div>
             )}
 
-
             {/* book details */}
             <div className="col-12 col-md-5">
               <div className="card shadow p-4 h-100">
@@ -189,7 +188,6 @@ const BookDetails = () => {
         </div>
       )}
     </div>
-   
   );
 };
 
