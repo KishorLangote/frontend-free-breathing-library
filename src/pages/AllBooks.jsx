@@ -43,44 +43,37 @@ const AllBooks = () => {
 
   return data ? (
     <div className="container-fluid py-3" style={{ minHeight: "80vh" }}>
-      <div className="row mb-5">
-        <div className="col-6">
-          <h1 className="fw-bold fs-3 mx-5">All Books</h1>
+      <div className="row mb-4 align-items-center">
+      <div className="col-md-6 text-center text-md-start">
+          <h1 className="fs-3">All Books</h1>
         </div>
 
-        <div className="col-6">
-          <div className="row d-flex align-items-center justify-content-center text-center mx-5 px-5 fs-5">
-            <div className="col-6">
-              <label>
-                {" "}
-                <IoFilter /> Filter
-              </label>
-            </div>
-            <div className="col-6">
-              <select
-                className="form-select form-control text-center fs-5 border"
-                value={filterGenre}
-                onChange={genreHandler}
-              >
-                <option value="All">All</option>
-                <option value="Educational">Educational</option>
-                <option value="Business">Business</option>
-                <option value="Philosophical">Philosophical</option>
-                <option value="Fiction">Fiction</option>
-                <option value="Non-Fiction">Non-Fiction</option>
-                <option value="Environment">Environment</option>
-                <option value="Poetry">Poetry</option>
-                <option value="History">History</option>
-                <option value="Social">Social</option>
-                <option value="Psychological">Psychological</option>
-                <option value="Stories">Stories</option>
-                <option value="Autobiography">Autobiography</option>
-                <option value="Art & Culture">Art & Culture</option>
-                <option value="Technology & Society">
-                  Technology & Society
-                </option>
-              </select>
-            </div>
+        <div className="col-md-6 d-flex justify-content-md-end justify-content-center">
+          <div className="d-flex align-items-center">
+            <label className="me-2 fs-5">
+              <IoFilter /> Filter
+            </label>
+            <select
+              className="form-select fs-5"
+              value={filterGenre}
+              onChange={genreHandler}
+            >
+              <option value="All">All</option>
+              <option value="Educational">Educational</option>
+              <option value="Business">Business</option>
+              <option value="Philosophical">Philosophical</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+              <option value="Environment">Environment</option>
+              <option value="Poetry">Poetry</option>
+              <option value="History">History</option>
+              <option value="Social">Social</option>
+              <option value="Psychological">Psychological</option>
+              <option value="Stories">Stories</option>
+              <option value="Autobiography">Autobiography</option>
+              <option value="Art & Culture">Art & Culture</option>
+              <option value="Technology & Society">Technology & Society</option>
+            </select>
           </div>
         </div>
       </div>
@@ -94,10 +87,10 @@ const AllBooks = () => {
         </div>
       )}
       <div className="text-center page-container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
           {data &&
             filteredGenre.slice((page - 1) * 12, page * 12).map((book) => (
-              <div key={book._id} className="fs-4">
+              <div key={book._id} >
                 {<BookCard data={book} />}
               </div>
             ))}
