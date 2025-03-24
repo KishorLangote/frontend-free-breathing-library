@@ -30,7 +30,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="container py-4" style={{ minHeight: "100vh" }}>
+    <div className="container-fluid py-4" style={{ minHeight: "100vh" }}>
       {!profile ? (
         <div
           className="d-flex justify-content-center align-items-center"
