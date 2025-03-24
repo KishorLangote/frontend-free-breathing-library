@@ -56,7 +56,7 @@ const RequestBook = () => {
                   <Loader />
                 </div>
       )}
-      <h1 className="mb-5">Request Book</h1>
+      <h1 className="mb-4 fs-3 fw-bold">Request Book</h1>
       <form 
       onSubmit={handleSubmit}
       className="fs-5"
