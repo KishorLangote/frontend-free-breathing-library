@@ -15,7 +15,7 @@ const Sidebar = ({ data }) => {
   return (
     <>
       { <Loader /> && (
-        <div class="d-flex flex-column align flex-shrink-0 p-3 bg-body-tertiary border shadow">
+        <div class="p-3 bg-body-tertiary border shadow">
         <div className="text-center w-100">
           <img
             src={data.avatar}
@@ -74,6 +74,7 @@ const Sidebar = ({ data }) => {
         </div>
         )}
         <hr />
+        <div className="d-flex align-items-center justify-content-center">
         <button to="" className="btn btn-info text-light fw-semibold fs-5 mb-5"
         onClick={() => {
           dispatch(authActions.logout())
@@ -86,6 +87,7 @@ const Sidebar = ({ data }) => {
         >
           Log out <IoMdLogOut />
         </button>
+        </div>
       </div>
       )}
     </>
