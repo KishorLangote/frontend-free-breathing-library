@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Profile/Sidebar";
 import axios from "axios";
 import MobileNav from "../components/Profile/MobileNav";
-import Loader from "../components/Loader/Loader";
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -31,14 +30,7 @@ const Profile = () => {
 
   return (
     <div className="container-fluid py-4" style={{ minHeight: "100vh" }}>
-      {!profile ? (
-        <div
-          className="d-flex justify-content-center align-items-center"
-          style={{ minHeight: "50vh" }}
-        >
-         <Loader />
-        </div>
-      ) : (
+      {profile && (
         <div className="row">
           <div className="col-12 col-md-3 mb-4 mb-md-0">
             <Sidebar data={profile} />
