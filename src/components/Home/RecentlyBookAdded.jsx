@@ -51,9 +51,9 @@ const RecentlyBookAdded = ({ searchTerm }) => {
         <p className="fs-4 mt-3">Loading...</p>
       </div>
       ) : (
-        <div className="container-fluid text-center">
+        <div className="container-fluid">
            <h2>Recently added books 📚</h2>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gap-4">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-4">
             {searchedBooks.map((book) => (
               <div key={book._id}>
                 <BookCard data={book} />
