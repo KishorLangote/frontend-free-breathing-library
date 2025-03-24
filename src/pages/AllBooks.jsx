@@ -35,14 +35,14 @@ const AllBooks = () => {
   const SelectPageHandler = (selectedPage) => {
     if (
       selectedPage >= 1 &&
-      selectedPage <= Math.ceil(filteredGenre.length / 9) &&
+      selectedPage <= Math.ceil(filteredGenre.length / 12) &&
       selectedPage !== page
     )
       setPage(selectedPage);
   };
 
   return data ? (
-    <div className="container py-3" style={{ minHeight: "80vh" }}>
+    <div className="container-fluid py-3" style={{ minHeight: "80vh" }}>
       <div className="row mb-5">
         <div className="col-6">
           <h1 className=" fs-3">All Books</h1>
@@ -94,9 +94,9 @@ const AllBooks = () => {
         </div>
       )}
       <div className="text-center page-container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4">
           {data &&
-            filteredGenre.slice((page - 1) * 9, page * 9).map((book) => (
+            filteredGenre.slice((page - 1) * 12, page * 12).map((book) => (
               <div key={book._id} className="fs-4">
                 {<BookCard data={book} />}
               </div>
@@ -106,7 +106,7 @@ const AllBooks = () => {
        {/* pagination */}
        <Pagination
          currentPage={page} 
-         totalPages={Math.ceil(filteredGenre.length / 9)}
+         totalPages={Math.ceil(filteredGenre.length / 12)}
          onPageChange={SelectPageHandler}
        />
       </div>
