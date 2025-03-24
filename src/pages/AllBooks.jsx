@@ -45,7 +45,7 @@ const AllBooks = () => {
     <div className="container-fluid py-3" style={{ minHeight: "80vh" }}>
       <div className="row mb-5">
         <div className="col-6">
-          <h1 className="fw-bold fs-3">All Books</h1>
+          <h1 className="fw-bold fs-3 mx-5">All Books</h1>
         </div>
 
         <div className="col-6">
