@@ -29,10 +29,10 @@ const BookCard = ({ data, favorites }) => {
   };
 
   return (
-    <div className="p-2">
+    <div className="container-fluid p-2">
       <Link to={`/book-details/${data._id}`} className='text-decoration-none' style={{ color: "black" }}>
         <div className=' border-light rounded p-3'>
-          <img src={data.coverImageUrl} className="img-fluid rounded shadow" style={{ objectFit: "cover", width: '100%', minHeight: "300px" }} />
+          <img src={data.coverImageUrl} className="img-fluid rounded shadow" style={{ objectFit: "cover", width: '80%', minHeight: "200px" }} />
           <div>
             <p className="fs-4 mt-3 fw-semibold">{data.title}</p>
             <p className='fs-5'>by {data.author.join(", ")}</p>

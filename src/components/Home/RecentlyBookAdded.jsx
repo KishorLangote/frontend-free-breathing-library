@@ -43,7 +43,7 @@ const RecentlyBookAdded = ({ searchTerm }) => {
 
 
   return (
-    <div className="container align-top mx-auto mb-5">
+    <div className="container-fluid align-top mx-auto mb-5">
       {!data.length ? (
         <div className="text-center mt-5">
         <div className="spinner-border text-primary" >
@@ -51,9 +51,9 @@ const RecentlyBookAdded = ({ searchTerm }) => {
         <p className="fs-4 mt-3">Loading...</p>
       </div>
       ) : (
-        <div className="container">
+        <div className="container-fluid text-center">
            <h2>Recently added books 📚</h2>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 text-center">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 gap-4">
             {searchedBooks.map((book) => (
               <div key={book._id}>
                 <BookCard data={book} />
