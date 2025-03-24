@@ -25,7 +25,7 @@ const Header = () => {
             </Link>
             <div>
               <h className=" fs-1 fw-bold mx-0 d-flex align-items-center">
-                Free Breathing <GiHummingbird />
+                Free Breathing <span className="mx-1"><GiHummingbird /></span>
               </h>
             </div>
           
