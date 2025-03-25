@@ -1,10 +1,10 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { TbBrandMeta } from "react-icons/tb";
-import { IoLogoInstagram } from "react-icons/io";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FiPhoneCall } from "react-icons/fi";
+import { GrLinkedin } from "react-icons/gr";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -49,11 +49,11 @@ const Footer = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <h5 className="fw-bold mb-3">Follow Us</h5>
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mb-3">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-dark">
-                <TbBrandMeta size={24} />
+              <a href="https://www.linkedin.com/in/kishorlangote/" target="_blank" rel="noopener noreferrer" className="text-dark">
+                <GrLinkedin size={24} /> 
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-dark">
-                <IoLogoInstagram size={24} />
+              <a href="https://github.com/KishorLangote" target="_blank" rel="noopener noreferrer" className="text-dark">
+                <FaGithub size={24} />
               </a>
               <a href="https://x.com/FreeBreathing0" target="_blank" rel="noopener noreferrer" className="text-dark">
                 <RiTwitterXLine size={24} />
