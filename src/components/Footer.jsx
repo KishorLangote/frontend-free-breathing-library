@@ -8,16 +8,16 @@ import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="border-top py-5 bg-info text-white" >
+    <footer className="border-top py-5 bg-info text-dark" >
       <div className="container">
-        <div className="row g-4 text-center text-md-start">
+        <div className="row g-4 text-center text-md-start ">
           {/* newsletter section */}
           <div className="col-12 col-md-6 col-lg-3">
             <h5 className="fw-bold mb-3">Newsletter</h5>
-            <p className="text-light">
+            <p>
               Be the first to hear about new books, exclusive events, and more.
             </p>
-            <p className="text-white small">
+            <p >
               Sign up and get your favorite book on your first order.
             </p>
            
@@ -27,10 +27,10 @@ const Footer = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <h5 className="fw-bold mb-3">Read</h5>
             <ul className="list-unstyled">
-              <li><Link to="#" className="text-decoration-none text-light">e-Books</Link></li>
-              <li><Link to="#" className="text-decoration-none text-light">Simply Sketchy Cartoons</Link></li>
-              <li><Link to="#" className="text-decoration-none text-light">Fictions/Non-Fiction</Link></li>
-              <li><Link to="#" className="text-decoration-none text-light">Nobel Literatures</Link></li>
+              <li><Link to="#" className="text-decoration-none text-dark">e-Books</Link></li>
+              <li><Link to="#" className="text-decoration-none text-dark">Simply Sketchy Cartoons</Link></li>
+              <li><Link to="#" className="text-decoration-none text-dark">Fictions/Non-Fiction</Link></li>
+              <li><Link to="#" className="text-decoration-none text-dark">Nobel Literatures</Link></li>
             </ul>
           </div>
 
@@ -38,10 +38,10 @@ const Footer = () => {
           <div className="col-12 col-md-6 col-lg-3">
             <h5 className="fw-bold mb-3">Support</h5>
             <ul className="list-unstyled">
-              <li><Link to="/contact" className="text-decoration-none text-light">Contact Us</Link></li>
-              <li><Link to="/about" className="text-decoration-none text-light">About Us</Link></li>
-              <li><Link to="#" className="text-decoration-none text-light">FAQs</Link></li>
-              <li><Link to="#" className="text-decoration-none text-light">Features</Link></li>
+              <li><Link to="/contact" className="text-decoration-none text-dark">Contact Us</Link></li>
+              <li><Link to="/about" className="text-decoration-none text-dark">About Us</Link></li>
+              <li><Link to="#" className="text-decoration-none text-dark">FAQs</Link></li>
+              <li><Link to="#" className="text-decoration-none text-dark">Features</Link></li>
             </ul>
           </div>
 
@@ -66,7 +66,7 @@ const Footer = () => {
 
         {/* footer bottom */}
         <div className="border-top pt-3 mt-4 text-center">
-          <p className="text-white small">
+          <p className="text-dark small">
             &copy; 2025 | Free Breathing. All Rights Reserved.
           </p>
         </div>
