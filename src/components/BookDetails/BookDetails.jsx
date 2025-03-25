@@ -19,7 +19,7 @@ const BookDetails = () => {
     const fetchedData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/v1/get-book-by-id/${id}`
+          `https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/get-book-by-id/${id}`
         );
         setData(response.data.data);
       } catch (error) {
@@ -44,7 +44,7 @@ const BookDetails = () => {
   const handleFavorite = async (e) => {
     try {
       const response = await axios.put(
-        "http://localhost:3000/api/v1/add-book-to-favorite",
+        "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/add-book-to-favorite",
         body,
         { headers }
       );
@@ -67,7 +67,7 @@ const BookDetails = () => {
       };
 
       const response = await axios.put(
-        "http://localhost:3000/api/v1/add-to-cart",
+        "https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/add-to-cart",
         body,
         { headers }
       );
@@ -79,7 +79,7 @@ const BookDetails = () => {
 
   const deleteBook = async (e) => {
     const response = await axios.delete(
-      `http://localhost:3000/api/v1/delete-book/${id}`,
+      `https://kishor-langote-backend-free-breathing-library.vercel.app/api/v1/delete-book/${id}`,
       { headers }
     );
     alert(response.data.message);
