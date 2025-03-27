@@ -29,7 +29,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="container-fluid py-4" style={{ minHeight: "100vh" }}>
+    <div className="container py-4" style={{ minHeight: "100vh" }}>
       {profile && (
         <div className="row">
           <div className="col-12 col-md-3 mb-4 mb-md-0">

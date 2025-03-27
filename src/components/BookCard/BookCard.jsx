@@ -29,14 +29,14 @@ const BookCard = ({ data, favorites }) => {
   };
 
   return (
-    <div className="container-fluid p-2">
+    <div className="container p-2">
       <Link to={`/book-details/${data._id}`} className='text-decoration-none' style={{ color: "black" }}>
         <div className=' border-light rounded p-3'>
-          <img src={data.coverImageUrl} className="img-fluid rounded shadow" style={{ objectFit: "cover", width: '70%', minHeight: "150px" }} />
+          <img src={data.coverImageUrl} className="img-fluid rounded shadow" style={{ objectFit: "cover", width: '100%', minHeight: "100px" }} />
           <div>
-            <p className="fs-4 mt-3 fw-semibold">{data.title}</p>
-            <p className='fs-5'>by {data.author.join(", ")}</p>
-            <p>₹ {data.price}</p>
+            <p className="mt-3 mb-0 fw-semibold">{data.title}</p>
+            <p className='mb-0'>by {data.author.join(", ")}</p>
+            <p><strong>Price:</strong> ₹ {data.price}</p>
           </div>
         </div>
       </Link>

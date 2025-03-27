@@ -48,7 +48,7 @@ const AllBooks = () => {
   };
 
   return data ? (
-    <div className="container-fluid py-3" style={{ minHeight: "80vh" }}>
+    <div className="container py-3" style={{ minHeight: "80vh" }}>
       <div className="row mb-4 align-items-center">
       <div className="col-md-6 text-center text-md-start">
           <h1 className="fs-3">All Books</h1>

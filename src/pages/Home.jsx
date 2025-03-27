@@ -8,7 +8,7 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState("")
 
   return (
-    <div className='container-fluid'>
+    <div className='container'>
       {/* pass setSearcjTerm to update search */}
        <SearchBar onSearch={setSearchTerm} /> 
        <Hero />

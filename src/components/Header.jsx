@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid fw-medium d-flex align-items-center justify-content-between header-container">
+        <div className="container fw-medium d-flex align-items-center justify-content-between header-container">
           <div className="d-flex align-items-center justify-content-between header-container">
             {/* Logo */}
             <Link to="/" className="navbar-brand d-flex align-items-center">
