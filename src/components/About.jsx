@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="container-fluid mb-5 p-5" style={{ minHeight: "60vh" }}>
+    <div className="container mb-5 p-5" style={{ minHeight: "60vh" }}>
       <p className="fw-bold fs-3 text-center mb-5">
         With Free Breathing Open Library, we dream of a world where knowledge is
         free, limitless, and accessible to all. 🌍📖
       </p>
 
       <div className="row d-flex justify-content-center mb-4">
-        <div className="col-lg-5 col-md-8 col-sm-12">
+        <div className="col-lg-6 col-md-8 col-sm-12">
           <div className="card shadow">
             <div className="card-body">
               <h5 className="text-center fw-bold fs-4">Notice ⚠️</h5>

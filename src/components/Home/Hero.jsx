@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="container-fluid">
+    <div className="container">
       <div className="row align-items-center text-center text-md-start mb-5" style={{ width: "100%", height: "100%"}}>
         
         {/* Text Section */}
